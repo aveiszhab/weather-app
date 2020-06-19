@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from "@testing-library/react";
 import ForecastSummary from '../../components/forecast-summary';
 
+
 describe('ForecastSummary', () => {
     it('renders the correct date, temperature, description and icon props', () => {
         const {asFragment} = render(
@@ -25,9 +26,8 @@ describe('ForecastSummary', () => {
                 icon='mockIcon'
         />
         );
-
         expect(getByText('mockDate')).toHaveClass('date');
-        expect(getByText('mockTemperature')).toHaveClass('temperature');
+        expect(getByText('mockTemperature°c')).toHaveClass('temperature');
         expect(getByText('mockDescription')).toHaveClass('description');
         expect(getByText('mockIcon')).toHaveClass('icon');
 

@@ -4,7 +4,7 @@ import ForecastSummaries from '../../components/forecast-summaries';
 
 const forecasts = [
     {
-        date: 123,
+        date: 1525046400000,
         description: 'date1',
         icon: '200',
         temperature: {
@@ -12,7 +12,7 @@ const forecasts = [
         }
     },
     {
-        date: 456,
+        date: 1525132800000,
         description: 'date2',
         icon: '200',
         temperature: {

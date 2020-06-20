@@ -12,7 +12,7 @@ exports[`ForecastSummaries renders correctly to match ForecastSummaries snapshot
         class="date"
         data-testid="date-id"
       >
-        Thu 4th Jan
+        Mon 30th Apr
       </div>
       <div
         class="temperature"
@@ -36,7 +36,7 @@ exports[`ForecastSummaries renders correctly to match ForecastSummaries snapshot
         />
       </div>
       <button
-        value="123"
+        value="1525046400000"
       >
         More Details
       </button>
@@ -48,7 +48,7 @@ exports[`ForecastSummaries renders correctly to match ForecastSummaries snapshot
         class="date"
         data-testid="date-id"
       >
-        Thu 4th Jan
+        Tue 1st May
       </div>
       <div
         class="temperature"
@@ -72,7 +72,7 @@ exports[`ForecastSummaries renders correctly to match ForecastSummaries snapshot
         />
       </div>
       <button
-        value="456"
+        value="1525132800000"
       >
         More Details
       </button>

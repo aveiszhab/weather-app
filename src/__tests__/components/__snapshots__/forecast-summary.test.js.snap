@@ -9,7 +9,7 @@ exports[`ForecastSummary renders correctly to match ForecastSummary snapshot 1`]
       class="date"
       data-testid="date-id"
     >
-      Thu 4th Jan
+      Mon 30th Apr
     </div>
     <div
       class="temperature"
@@ -33,7 +33,7 @@ exports[`ForecastSummary renders correctly to match ForecastSummary snapshot 1`]
       />
     </div>
     <button
-      value="123134"
+      value="1525046400000"
     >
       More Details
     </button>

@@ -4,12 +4,12 @@ import WeatherIcon from 'react-icons-weather';
 import moment from 'moment';
 
 const ForecastSummary = (props) => {
-
+   
     return(
         <>
             <div className='forecast-summary'> 
                 <div className='date' data-testid='date-id'>
-                    {moment(props.date).format('ddd do MMM')}
+                    {moment(props.date).format('ddd Do MMM')}
                 </div>
                 <div className='temperature' data-testid='temperature-id'>
                     {props.temperature}&deg;c

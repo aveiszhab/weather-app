@@ -1,3 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ForecastSummary renders the correct date, temperature, description and icon props 1`] = `[Function]`;
+exports[`ForecastSummary renders correctly to match ForecastSummary snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="forecast-summary"
+  >
+    <div
+      class="date"
+      data-testid="date-id"
+    >
+      Thu 4th Jan
+    </div>
+    <div
+      class="temperature"
+      data-testid="temperature-id"
+    >
+      11°c
+    </div>
+    <div
+      class="description"
+      data-testid="description-id"
+    >
+      mockDescription
+    </div>
+    <div
+      class="icon"
+      data-testid="icon-id"
+    >
+      <i
+        class="wi wi-day-storm-showers"
+        name="owm"
+      />
+    </div>
+    <button
+      value="123134"
+    >
+      More Details
+    </button>
+  </div>
+</DocumentFragment>
+`;

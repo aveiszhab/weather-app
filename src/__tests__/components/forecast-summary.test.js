@@ -1,37 +1,37 @@
 import React from 'react';
-import { render } from "@testing-library/react";
+import { render } from '@testing-library/react';
 import ForecastSummary from '../../components/forecast-summary';
 
 
 describe('ForecastSummary', () => {
-    it('renders the correct date, temperature, description and icon props', () => {
-        const {asFragment} = render(
+    it('renders correctly to match ForecastSummary snapshot', () => {
+        const { asFragment } = render(
             <ForecastSummary
                 date={123134}
                 temperature={11}
                 description='mockDescription'
-                icon='mockIcon'
+                icon='200'
             />
         );
         
-        expect(asFragment).toMatchSnapshot();
+        expect(asFragment()).toMatchSnapshot();
     });
 
     
     it('renders the correct date, temperature, description and icon props', () => {
-        const { getByText } = render(
+        const { getByTestId } = render(
             <ForecastSummary
                 date={123134}
                 temperature={11}
                 description='mockDescription'
-                icon='mockIcon'
+                icon='200'
         />
         );
 
-        expect(getByText('123134')).toHaveClass('date');
-        expect(getByText('11°c')).toHaveClass('temperature');
-        expect(getByText('mockDescription')).toHaveClass('description');
-        expect(getByText('mockIcon')).toHaveClass('icon');
+        expect(getByTestId('date-id')).toHaveClass('date');
+        expect(getByTestId('temperature-id')).toHaveClass('temperature');
+        expect(getByTestId('description-id')).toHaveClass('description');
+        expect(getByTestId('icon-id')).toHaveClass('icon');
 
     });
     

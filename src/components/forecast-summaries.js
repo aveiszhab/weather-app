@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ForecastSummary from './forecast-summary'
+import ForecastSummary from './forecast-summary';
 
-const ForecastSummaries = props => (
+import '../styles/forecast-summaries.css'
+
+const ForecastSummaries = props => {
+   
+    return(
     <div className='forecast-summaries'>
         {
             props.forecasts.map(forecast => (
@@ -17,7 +21,7 @@ const ForecastSummaries = props => (
             ))
         }
     </div>
-);
+)};
 
 ForecastSummaries.propTypes ={
     forecasts: PropTypes.array.isRequired

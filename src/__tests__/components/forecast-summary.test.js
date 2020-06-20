@@ -7,8 +7,8 @@ describe('ForecastSummary', () => {
     it('renders the correct date, temperature, description and icon props', () => {
         const {asFragment} = render(
             <ForecastSummary
-                date='mockDate'
-                temperature='mockTemperature'
+                date={123134}
+                temperature={11}
                 description='mockDescription'
                 icon='mockIcon'
             />
@@ -17,17 +17,19 @@ describe('ForecastSummary', () => {
         expect(asFragment).toMatchSnapshot();
     });
 
+    
     it('renders the correct date, temperature, description and icon props', () => {
         const { getByText } = render(
             <ForecastSummary
-                date='mockDate'
-                temperature='mockTemperature'
+                date={123134}
+                temperature={11}
                 description='mockDescription'
                 icon='mockIcon'
         />
         );
-        expect(getByText('mockDate')).toHaveClass('date');
-        expect(getByText('mockTemperature°c')).toHaveClass('temperature');
+
+        expect(getByText('123134')).toHaveClass('date');
+        expect(getByText('11°c')).toHaveClass('temperature');
         expect(getByText('mockDescription')).toHaveClass('description');
         expect(getByText('mockIcon')).toHaveClass('icon');
 

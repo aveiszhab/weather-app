@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 import LocationDetails from './location-details';
 import ForecastSummaries from './forecast-summaries';
 
-const App = (props) => (
+import '../styles/app.css';
+
+const App = (props) => {
+    
+    return(
     <div className='forecast'>
         <LocationDetails 
             city={ props.location.city }
@@ -12,7 +16,7 @@ const App = (props) => (
         />
         <ForecastSummaries forecasts={props.forecasts} />
     </div>
-);
+)};
 
 App.propTypes = {
     location: PropTypes.shape({

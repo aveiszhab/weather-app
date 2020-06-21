@@ -35,9 +35,7 @@ exports[`ForecastSummaries renders correctly to match ForecastSummaries snapshot
           name="owm"
         />
       </div>
-      <button
-        value="1525046400000"
-      >
+      <button>
         More Details
       </button>
     </div>
@@ -71,9 +69,7 @@ exports[`ForecastSummaries renders correctly to match ForecastSummaries snapshot
           name="owm"
         />
       </div>
-      <button
-        value="1525132800000"
-      >
+      <button>
         More Details
       </button>
     </div>

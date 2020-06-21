@@ -32,10 +32,10 @@ ForecastSummary.propTypes = {
         temperature: PropTypes.number.isRequired,
         description: PropTypes.string.isRequired,
         icon: PropTypes.string.isRequired,
-        //onSelect:PropTypes.func.isRequired
+        onSelect:PropTypes.func.isRequired
     }),
     
-}
+};
 
 
 

@@ -13,20 +13,32 @@ const App = () => {
     //API Request
     const [forecasts, setForecasts] = useState([]);
     const [location, setLocation] = useState({ city: '', country: ''});
+    const [isLoading, setIsLoading] = useState(false);
+    const [isError, setIsError] = useState(false);
     
     useEffect(() => {
-                
-        axios({
-            method: 'GET',
-            url:' https://mcr-codes-weather.herokuapp.com/forecast',
-        }).then(res => {
-            return (
-                setLocation(res.data.location),
-                setForecasts(res.data.forecasts)
-            )
-        })
-    },[]);
-    
+        const getData = async () => {
+            setIsLoading(true); 
+            setIsError(false);
+       
+            try {
+                const result = await axios({
+                    method: 'GET',
+                    url:` https://mcr-codes-weather.herokuapp.com/forecast`,
+                });
+                setLocation(result.data.location);
+                setForecasts(result.data.forecasts);
+            } catch (error) {
+              setIsError(error.message);
+            }
+       
+            setIsLoading(false);
+          };
+       
+          getData();
+    }, []);
+       
+   
     //Selected Forecast
     const [selectedDate, setSelectedDate] = useState(0);
     const selectedForecast = forecasts.find(
@@ -41,37 +53,68 @@ const App = () => {
     const handleCitySelect = (city) => {
         const selectedCity = city.toLowerCase();
         
-        axios({
-            method: 'GET',
-            url:` https://mcr-codes-weather.herokuapp.com/forecast`,
-            params: {
-                city: selectedCity
+        const getData = async () => {
+            setIsLoading(true); 
+            setIsError(false);
+       
+            try {
+                const result = await axios({
+                    method: 'GET',
+                    url:` https://mcr-codes-weather.herokuapp.com/forecast`,
+                    params: {
+                        city: selectedCity
+                    }
+                });
+                setLocation(result.data.location);
+                setForecasts(result.data.forecasts);
+            } catch (error) {
+              setIsError(error.message);
             }
-        }).then(res => {
-            return (
-                setLocation(res.data.location),
-                setForecasts(res.data.forecasts)
-            )
-            
-        })
+       
+            setIsLoading(false);
+          };
+       
+          getData();
     };
-
-
-    return(
-    <div className='forecast'>
-        <LocationDetails    
+   
+    
+    //Return section    
+    if (isError === 'Request failed with status code 404') {
+        return (
+            <div className='404 error'>
+                <div>Please pick a city from the Earth, even better, pick one from UK</div>
+            </div>
+        )
+    } else if (isError === 'Request failed with status code 404') {
+        return (
+            <div className='any error'>
+                <div>Ooooops ..... you know what to do</div>
+            </div>
+        )
+    } else if(isLoading) {
+        return (
+            <div className='forecast'>
+                <div>Loading ...</div>
+            </div>
+        )
+    } else {
+        return(
+        <div className='forecast'>
+            <LocationDetails    
             city={location.city}
             country={location.country}
-        />
-        <SearchForm 
-            onClick={handleCitySelect}
-        />
-        <ForecastSummaries 
-            forecasts={forecasts}
-            onForecastSelect={handleForecastSelect}
-         />
-        {selectedForecast && <ForecastDetails forecast={ selectedForecast } />}
-    </div>
-)};
+            />
+            <SearchForm 
+                onClick={handleCitySelect}
+            />
+            <ForecastSummaries 
+                forecasts={forecasts}
+                onForecastSelect={handleForecastSelect}
+                />
+            {selectedForecast && <ForecastDetails forecast={ selectedForecast } />}
+        </div>
+        )
+    }
+};
 
 export default App;

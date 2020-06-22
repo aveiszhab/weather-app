@@ -1,4 +1,9 @@
 .forecast-summaries {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
+    background-color: rgb(78,139,18);
+    border: 2px solid rgb(9, 32, 2);
+    padding: 1rem 1rem;
+    
 }

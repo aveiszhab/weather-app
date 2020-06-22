@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
 
+import '../styles/search-form.css'
+
 const SearchForm = (props) => {
 
     const [searchText, setSearchtext] = useState('')
@@ -16,6 +18,7 @@ const SearchForm = (props) => {
             type='text' 
             value={searchText}
             onChange={handleInputChange} 
+            placeholder='City name please'
             >
         </input>
         <button 

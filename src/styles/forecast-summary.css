@@ -1,0 +1,21 @@
+.forecast-summary {
+    color: rgb(5, 19, 1);
+    text-align: center; 
+}
+
+.date {
+    color: rgb(136, 226, 45);
+    font-weight: bold;
+    margin: 0.5rem;
+    
+}
+
+.temperature {
+    color: ivory;
+    margin: 0.5rem;
+}
+
+.icon {
+    color: ivory;
+    margin: 0.5rem;
+}

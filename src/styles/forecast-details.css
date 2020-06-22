@@ -1,0 +1,33 @@
+.forecast-details {
+    text-align: center;
+    background-color: rgb(66, 90, 43);  
+    border: 2px solid rgb(9, 32, 2);
+}
+
+.date {
+    color: rgb(136, 226, 45);
+    text-shadow: 2px 2px rgb(9, 32, 2);
+    font-weight: bold;
+    margin: 0.5rem;
+    
+}
+
+.temperatureMax {
+    color: ivory;
+    margin: 0.5rem;
+}
+
+.temperatureMin {
+    color: ivory;
+    margin: 0.5rem;
+}
+
+.humidity {
+    color: ivory;
+    margin: 0.5rem;
+}
+
+.wind {
+    color: ivory;
+    margin: 0.5rem;
+}

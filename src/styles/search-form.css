@@ -1,0 +1,28 @@
+.search-form {
+   
+}
+
+input {
+    width: 40%;
+    border: 1px solid rgb(9, 32, 2);
+    
+    padding: 0.8rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+button {
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid rgb(9, 32, 2);
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem;
+  }
+
+  button:hover {
+    background-color: rgb(245, 255, 190);
+}

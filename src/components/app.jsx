@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import MyLogo from '../MyLogo.png'
 
 import ForecastDetails from './forecast-details'
 import LocationDetails from './location-details';
@@ -93,25 +94,35 @@ const App = () => {
         )
     } else if(isLoading) {
         return (
-            <div className='forecast'>
+            <div className='loading'>
                 <div>Loading ...</div>
             </div>
         )
     } else {
         return(
-        <div className='forecast'>
-            <LocationDetails    
-            city={location.city}
-            country={location.country}
-            />
-            <SearchForm 
-                onClick={handleCitySelect}
-            />
-            <ForecastSummaries 
-                forecasts={forecasts}
-                onForecastSelect={handleForecastSelect}
+        <div>
+            <header>
+            <div className="banner">
+                <img src={MyLogo} alt='Logo'/>
+                <h1 className='title'> 
+                    The Weather App
+                </h1> 
+            </div>  
+            </header>
+            <div className='forecast'>
+                <LocationDetails    
+                city={location.city}
+                country={location.country}
                 />
-            {selectedForecast && <ForecastDetails forecast={ selectedForecast } />}
+                <SearchForm 
+                    onClick={handleCitySelect}
+                />
+                <ForecastSummaries 
+                    forecasts={forecasts}
+                    onForecastSelect={handleForecastSelect}
+                    />
+                {selectedForecast && <ForecastDetails forecast={ selectedForecast } />}
+            </div>
         </div>
         )
     }

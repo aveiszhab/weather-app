@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import WeatherIcon from 'react-icons-weather';
 import moment from 'moment';
 
+import '../styles/forecast-summary.css'
+
 const ForecastSummary = (props) => {
    
     return(

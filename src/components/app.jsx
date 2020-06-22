@@ -82,13 +82,13 @@ const App = () => {
     //Return section    
     if (isError === 'Request failed with status code 404') {
         return (
-            <div className='404 error'>
-                <div>Please pick a city from the Earth, even better, pick one from UK</div>
+            <div className='error404'>
+                <div>Please pick a city from the Earth, even better, pick one from UK next time. I am afraid you have to refresh the page now</div>
             </div>
         )
     } else if (isError === 'Request failed with status code 404') {
         return (
-            <div className='any error'>
+            <div className='errorAny'>
                 <div>Ooooops ..... you know what to do</div>
             </div>
         )

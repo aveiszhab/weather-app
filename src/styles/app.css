@@ -12,6 +12,7 @@ header {
     margin-bottom: 1rem;
     margin-top: 1rem;
     height: 1%;
+    margin: 20px;
 }
 
 .banner {
@@ -31,4 +32,28 @@ img {
     font-size: 3vw;
     text-align: center;
     color: rgb(255, 255, 250)
+}
+
+.errorAny {
+    font-size: 3vw;
+    text-align: center;
+    color: rgb(9, 32, 2);
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(136, 226, 45);
+}
+
+.error404 {
+    font-size: 3vw;
+    text-align: center;
+    color: rgb(9, 32, 2);
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(136, 226, 45);
+}
+
+.loading {
+    font-size: 3vw;
+    text-align: center;
+    color: rgb(9, 32, 2);
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(136, 226, 45);
 }

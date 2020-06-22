@@ -1,14 +1,10 @@
-.search-form {
-   
-}
-
 input {
     width: 40%;
     border: 1px solid rgb(9, 32, 2);
     
     padding: 0.8rem;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 1vw;
     font-weight: 600;
 }
 
@@ -18,7 +14,7 @@ button {
     border: 1px solid rgb(9, 32, 2);
     cursor: pointer;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1vw;
     font-weight: 600;
     margin: 0.5rem;
   }
